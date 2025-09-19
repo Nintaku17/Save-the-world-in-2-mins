@@ -15,6 +15,9 @@ TagManager:
   - Wallls
   - Lava
   - Food
+  - red
+  - blue
+  - green
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,7 @@ public class PlayerControler : MonoBehaviour
     private Transform Orgin;
     public float AttackTime = 0;
     public float Max = 3;
-    public float Lifetime = 1;
+    public int Keys = 0;
     public bool RKey = false;
     public bool BKey = false;
     public bool GKey = false;
@@ -92,7 +92,32 @@ public class PlayerControler : MonoBehaviour
             transform.position = new Vector3(-22, 164, 0);
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("Red"))
+        {
+            if(Keys > 0)
+            {
+                Keys--;
+                Destroy(other.gameObject);
+            }
+        }
         
+        if (other.gameObject.CompareTag("Blue"))
+        {
+            if(Keys > 0)
+            {
+                Keys--;
+                Destroy(other.gameObject);
+            }
+        }
+        if (other.gameObject.CompareTag("Green"))
+        {
+            if(Keys > 0)
+            {
+                Keys--;
+                Destroy(other.gameObject);
+            }
+            
+        }
 
         
     }
@@ -108,20 +133,25 @@ public class PlayerControler : MonoBehaviour
         
         if (other.gameObject.CompareTag("RedKey"))
         {
-            var b = RKey == true;
+            var RKey = true;
+            Keys++;
             Destroy(other.gameObject);
         }
         
         if (other.gameObject.CompareTag("BlueKey"))
         {
-            var b = BKey == true;
+            var BKey = true;
+            Keys++;
             Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("GreenKey"))
         {
-            var b = GKey == true;
+            var GKey = true;
+            Keys++;
             Destroy(other.gameObject);
         }
+        
+
         if (other.gameObject.CompareTag("Finish"))
         {
             SceneManager.LoadScene("You Win");

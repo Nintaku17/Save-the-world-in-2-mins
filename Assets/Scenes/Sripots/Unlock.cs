@@ -19,7 +19,7 @@ public class Unlock : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ness"))
         {
- 
+         
             Destroy(this.gameObject);
             
             
