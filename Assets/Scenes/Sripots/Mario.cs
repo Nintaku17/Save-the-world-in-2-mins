@@ -3,13 +3,14 @@ using UnityEngine;
 public class Mario : MonoBehaviour
 {
     
-    public SpriteRenderer Pog;
+    public Sprite Pog;
 
-    void Start()
+    private void Awake()
     {
-        
-    }
+        God.Mario = this;
 
+
+    }
     void Update()
     {
         

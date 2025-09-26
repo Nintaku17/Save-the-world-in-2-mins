@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/You Lose.unity
+    path: Assets/Scenes/Oh no.unity
     guid: 2283f6e67623183439cb53b7750f6c73
   - enabled: 1
-    path: Assets/Scenes/You Win.unity
+    path: Assets/Scenes/You did it.unity
     guid: 3b16c484007c9e3448ed4d6010389976
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

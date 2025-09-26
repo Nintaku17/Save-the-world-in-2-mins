@@ -18,6 +18,7 @@ TagManager:
   - red
   - blue
   - green
+  - AKey
   layers:
   - Default
   - TransparentFX

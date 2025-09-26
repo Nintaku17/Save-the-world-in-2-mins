@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5739181080919201400}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.34, y: 112.8, z: -0.9332114}
+  m_LocalPosition: {x: -17.6, y: 112.26, z: 0}
   m_LocalScale: {x: 3.2562, y: 3.0577, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aafc895338505b43ac4eb041f82d252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pogo: {fileID: 5205918494908295416, guid: 7ad221c41b937664d8d2a806515c040b, type: 3}

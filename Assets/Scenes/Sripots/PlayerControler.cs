@@ -25,6 +25,7 @@ public class PlayerControler : MonoBehaviour
     public bool RKey = false;
     public bool BKey = false;
     public bool GKey = false;
+    public bool AKey = false;
 
     private void Awake()
     {
@@ -89,29 +90,29 @@ public class PlayerControler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Evil"))
         {
-            transform.position = new Vector3(-22, 164, 0);
+            transform.position = new Vector3(0, 0, 0);
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("Red"))
+        if (other.gameObject.CompareTag("red"))
         {
-            if(Keys > 0)
+            if(RKey == true)
             {
                 Keys--;
                 Destroy(other.gameObject);
             }
         }
         
-        if (other.gameObject.CompareTag("Blue"))
+        if (other.gameObject.CompareTag("blue"))
         {
-            if(Keys > 0)
+            if(BKey == true)
             {
                 Keys--;
                 Destroy(other.gameObject);
             }
         }
-        if (other.gameObject.CompareTag("Green"))
+        if (other.gameObject.CompareTag("green"))
         {
-            if(Keys > 0)
+            if(GKey == true)
             {
                 Keys--;
                 Destroy(other.gameObject);
@@ -119,7 +120,7 @@ public class PlayerControler : MonoBehaviour
             
         }
 
-        
+            
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -133,28 +134,28 @@ public class PlayerControler : MonoBehaviour
         
         if (other.gameObject.CompareTag("RedKey"))
         {
-            var RKey = true;
+            RKey = true;
             Keys++;
             Destroy(other.gameObject);
         }
         
         if (other.gameObject.CompareTag("BlueKey"))
         {
-            var BKey = true;
+            BKey = true;
             Keys++;
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("GreenKey"))
+        if (other.gameObject.CompareTag("AKey"))
         {
-            var GKey = true;
-            Keys++;
+            AKey = true;
+            
             Destroy(other.gameObject);
         }
         
 
         if (other.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene("You Win");
+            SceneManager.LoadScene("You did it");
         }
         
     }

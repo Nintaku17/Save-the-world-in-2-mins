@@ -3,13 +3,15 @@ using UnityEngine;
 public class Luigi : MonoBehaviour
 {
 
-    public SpriteRenderer Pogo;
+    public Sprite Pogo;
     
     
     
-    void Start()
+    private void Awake()
     {
-        
+        God.Luigi = this;
+
+
     }
 
     void Update()

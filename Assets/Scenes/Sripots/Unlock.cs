@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class Unlock : MonoBehaviour
 {
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+
+
 
     }
 
@@ -12,19 +18,12 @@ public class Unlock : MonoBehaviour
     void Update()
     {
 
+
+
     }
 
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ness"))
-        {
-         
-            Destroy(this.gameObject);
-            
-            
-        }
-    }
+
 }
     
 

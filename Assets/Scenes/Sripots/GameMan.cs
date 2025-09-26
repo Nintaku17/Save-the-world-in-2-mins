@@ -12,12 +12,12 @@ public class GameMan : MonoBehaviour
         timer -= Time.deltaTime;
 
       
-        float displayTime = Mathf.Max(timer, 0f);
-        timerText.text = "Time: " + displayTime.ToString("0.0");
+        int displayTime = Mathf.CeilToInt(timer);
+        timerText.text = "Time: " + displayTime;
 
         if (timer <= 0)
         {
-            SceneManager.LoadScene("You Lose");
+            SceneManager.LoadScene("Oh no");
         }
     }
 }

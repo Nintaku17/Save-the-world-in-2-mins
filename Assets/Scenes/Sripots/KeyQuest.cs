@@ -1,19 +1,15 @@
 using UnityEngine;
 
-public class KayQuest : MonoBehaviour
+public class KeyQuest : MonoBehaviour
 {
-   
-    void Start()
+    public Sprite spget;
+
+    private void Awake()
     {
-        
+        God.KeyQuest = this;
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-        
-        
-    }
+    
 }
