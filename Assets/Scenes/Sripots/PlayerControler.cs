@@ -10,8 +10,8 @@ using UnityEngine.UIElements;
 
 public class PlayerControler : MonoBehaviour
 {
-    
-   
+
+    public GameObject[] Food;
     
     
     public SpriteRenderer SR;
@@ -80,8 +80,8 @@ public class PlayerControler : MonoBehaviour
 
     }
 
-        
 
+   
     
 
 
@@ -110,6 +110,7 @@ public class PlayerControler : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        
         if (other.gameObject.CompareTag("green"))
         {
             if(GKey == true)
@@ -119,7 +120,7 @@ public class PlayerControler : MonoBehaviour
             }
             
         }
-
+        
             
     }
     
@@ -145,13 +146,28 @@ public class PlayerControler : MonoBehaviour
             Keys++;
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("GreenKey"))
+        {
+            GKey = true;
+            Keys++;
+            Destroy(other.gameObject);
+        }
         if (other.gameObject.CompareTag("AKey"))
         {
             AKey = true;
             
             Destroy(other.gameObject);
         }
-        
+        if (other.gameObject.CompareTag("Food"))
+        {
+            if(AKey == true)
+            {
+                Food[0].SendMessage("Keydone");
+                Food[1].SendMessage("Keydone");
+                Food[2].SendMessage("Keydone");
+            }
+            
+        }
 
         if (other.gameObject.CompareTag("Finish"))
         {

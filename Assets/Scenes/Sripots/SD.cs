@@ -5,7 +5,7 @@ public class weapon : MonoBehaviour
 
     private void Awake()
     {
-        God.SD = this;
+       // God.SD = this;
 
 
     }
